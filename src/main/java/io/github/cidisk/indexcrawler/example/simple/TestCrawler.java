@@ -1,4 +1,4 @@
-package tk.cidisk.test;
+package io.github.cidisk.indexcrawler.example.simple;
 
 
 import io.github.cidisk.indexcrawler.CrawlConfig;
