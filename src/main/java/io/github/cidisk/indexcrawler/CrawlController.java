@@ -102,10 +102,10 @@ public class CrawlController extends Configurable {
 		infoEnvConfig.setAllowCreate(true);
 		infoEnvConfig.setTransactional(infoResumable);
 		infoEnvConfig.setLocking(infoResumable);
-
+		logger.debug("Crawl store folder:"+config.getCrawlStorageFolder());
 		File envHome = new File(config.getCrawlStorageFolder() + "/frontier/index");
 		if (!envHome.exists()) {
-			if (!envHome.mkdir()) {
+			if (!envHome.mkdirs()) {
 				throw new Exception("Couldn't create this index folder: "
 						+ envHome.getAbsolutePath());
 			}
